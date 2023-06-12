@@ -3,9 +3,9 @@
   "name": "Edookit average calculator",
   "version": "1.0",
   "description": "calculates average evaluation",
-  // "icons": {
-  //   "48": ""
-  // },
+  "icons": {
+    "128": "icon.png"
+  },
   "content_scripts": [
     {
       "matches": [
