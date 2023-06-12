@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Edookit average calculator",
+  "version": "1.0",
+  "description": "calculates average evaluation",
+  // "icons": {
+  //   "48": ""
+  // },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.edookit.net/evaluation/"
+      ],
+      "js": [
+        "edookit_calc.js"
+      ]
+    }
+  ]
+}
