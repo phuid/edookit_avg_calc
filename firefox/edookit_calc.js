@@ -50,11 +50,17 @@ document.querySelectorAll(".evaluationsRow").forEach((row) => {
           var second = Number(
             mark.substring(slashIndex + 1, convertedIndex - 1)
           );
-          var converted = mark.substring(convertedIndex + 1, mark.length - 2);
 
+          var convertedString = markSpan.querySelector(".convertedEvaluation").innerText;
+          var converted = convertedString.substring(convertedString.indexOf('(') + 1, convertedString.indexOf(')'));
+          
           pointtotal += first * weight;
           pointmax += second * weight;
           total += converted * weight;
+
+          // row.innerHTML += first + " " + second + " " + converted + "<br>";
+
+          markSpan.style.borderBottom = `thick solid rgb(${255-(255*first/second)}, ${255*first/second}, 0)`;
         } else {
           console.error(
             "found converted eval, but not divider slash" +
